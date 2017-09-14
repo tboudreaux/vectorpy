@@ -4,7 +4,7 @@ from os import path
 HERE = path.abspath(path.dirname(__file__))
 
 setup(name='vectorpy',
-      version='1',
+      version='1.3',
       description='Basic 3 Vector Object',
       url='https://github.com/tboudreaux/vectorpy.git',
       author='Thomas Boudreaux',
