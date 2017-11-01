@@ -7,7 +7,7 @@ Here is a simple example
     from vectorpy import vector
 
     vector_one = vector(2.3, 0, -5.6)
-    vector_two = vector()
+    vector_two = vector()   # intialize the vector <0, 0, 0>
 
     vector_three = vector_one + vector_two  # vector addition
 
@@ -20,6 +20,8 @@ Here is a simple example
     vector_list = vector_one.aslist()   # cast vector to python list
 
     length_of_V1 = abs(vector_one)  # Magnitude of vector
+    
+    print('Vector three is: {}, vector four is: {}'.format(vector_three, vector_four))
 
 
 ```
