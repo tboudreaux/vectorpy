@@ -64,7 +64,7 @@ class vector:  # Data type name
         return not self.__eq__(other)
 
     def cross(self, other):     # Corss product
-        return vector(self.y*other.z - self.z*other.y, self.z*other.x - self.x*other.z, self.x*other.y - self.y-other.x)
+        return vector(self.y*other.z - self.z*other.y, self.z*other.x - self.x*other.z, self.x*other.y - self.y*other.x)
 
     def dot(self, other):       # dot product
         return self.x*other.x + self.y*other.y + self.z*other.z
