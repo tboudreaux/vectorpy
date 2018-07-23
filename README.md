@@ -1,7 +1,19 @@
 # VectorPy
 A simple R3 vector (also known as a reimplimentation of the vector class from vpython which can be used without the nessesity to spin up a webserver)
 
-# Documentation
+## Installation
+vectorpy can be installed directly from the cloned source of this repository, or from pypi.
+```bash
+git clone https://github.com/tboudreaux/vectorpy.git
+cd vectorpy
+python setup.py install
+```
+or
+```bash
+pip install vectorpy
+```
+
+## Example
 Here is a simple example
 ```python
     from vectorpy import vector
