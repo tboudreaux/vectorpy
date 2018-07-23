@@ -1,8 +1,11 @@
 import numpy as np
+import numbers
 
 class vector:  # Data type name
     def __init__(self, i=0, j=0, k=0, orig=None):  # default parameters
         if orig is None:
+            if not isinstance(i, numbers.Number) or not isinstance(j, numbers.Number) or not isinstance(k, numbers.Number):
+                raise TypeError('Invalid vector <{}, {}, {}> of type <{}, {}, {}>. Vector object must be composed of numeric objects'.format(i, j, k, type(i), type(j), type(k)))
             self.x = i
             self.y = j
             self.z = k
@@ -88,16 +91,12 @@ class vector:  # Data type name
             return self.z
 
     def __setitem__(self, key, value):
-        try:
-            assert isinstance(key, int)
-        except AssertionError as e:
-            e.args += ('Error! Index type must be int not {}'.format(type(key)), 'try with int')
-            raise
-        try:
-            assert 0 <= key <= 2
-        except AssertionError as e:
-            e.args += ('Error! Vector index out of range', 'Valid indecies between 0 and 2')
-            raise
+        if not isinstance(key, int):
+            raise TypeError('Vector index must of of type int')
+        if not 0 <= key <= 2:
+            raise KeyError('Invalid vector index {}. Vector index must be in range [0, 2]'.format(key))
+        if not isinstance(value, numbers.Number):
+            raise TypeError('Invalid value {} of type {}. Vector must store numeric data'.format(value, type(value)))
         if key == 0:
             self.x = value
         elif key == 1:
