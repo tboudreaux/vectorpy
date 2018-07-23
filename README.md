@@ -1,5 +1,5 @@
 # VectorPy
-A simple R3 vector (also known as a reimplimentation of the vector class from vpython which can be used without the nessesity to spin up a webserver)
+A simple R3 vector (also known as a reimplimentation of the vector class from vpython which can be used without the nessesity to spin up wx or a webserver)
 
 ## Installation
 vectorpy can be installed directly from the cloned source of this repository, or from pypi.
